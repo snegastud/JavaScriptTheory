@@ -158,6 +158,9 @@ Skills            → Array (Object)
 >`BigInt`  BigInt is used to store very large integers that exceed the safe limit of the Number data type.
 >**Example** const amount = 123456789012345678901234567890n;
 
+**Why are Primitive Data Types Immutable?**
+>Primitive data types are immutable because once a value is created, JavaScript doesn't modify that original value. If we assign a new value, JavaScript creates a new value and the variable starts referencing it.
+
 **Non-Primitive Data Types**
 >*These store collections of values or more complex entities.*
 >
@@ -170,6 +173,8 @@ Skills            → Array (Object)
 | Date     | `new Date()`   |
 
 ```
+**Why Are Objects Mutable?**
+>Objects are mutable because JavaScript allows us to modify their properties without creating a new object. The same object remains in memory, and only its contents are updated.
 
 **What is  is Dynamic Typing?**
 
@@ -177,8 +182,11 @@ Skills            → Array (Object)
 
 **Primitive vs Non-Primitive?**
 
->"Primitive data types store a single value and are immutable. They are compared by value.
+>`Primitive data types` store a single value and are immutable. They are compared by value.
 
->Non-primitive data types store collections of values or more complex data. They are mutable and compared by reference."
+>`Non-primitive data types` store collections of values or more complex data. They are mutable and compared by reference.
+
+**What is typeof?**
+>The `typeof` operator is used to identify the data type of a value or variable.
 
 
