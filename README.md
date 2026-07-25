@@ -96,3 +96,19 @@
 
 >The purpose of TDZ is to prevent us from accidentally using a variable before it's properly initialized."
 
+**What are Data Types in JavaScript?**
+>Data types define the type of value that a variable can hold. JavaScript is a dynamically typed language, which means we don't need to explicitly specify the data type. JavaScript automatically determines the type based on the value assigned to the variable.
+
+>In JavaScript, data types are mainly classified into `Primitive and Non-Primitive data types`.
+
+**Real-Time Example**
+
+>Imagine you're filling an employee registration form.
+
+```Employee Name     → String
+Employee Age      → Number
+Is Active         → Boolean
+Employee Address  → Object
+Skills            → Array (Object)```
+
+>Each field stores a different type of data.
