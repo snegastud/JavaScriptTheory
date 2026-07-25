@@ -189,4 +189,17 @@ Skills            → Array (Object)
 **What is typeof?**
 >The `typeof` operator is used to identify the data type of a value or variable.
 
+**What is function?**
+
+>A function is a reusable block of code designed to perform a specific task. Instead of writing the same logic multiple times, we write it once inside a function and call it whenever needed. This improves code reusability, readability, and maintainability."
+
+**syntax**
+```
+function functionName(parameter1, parameter2) {
+
+    // Business Logic
+
+    return value;
+}
+```
 
