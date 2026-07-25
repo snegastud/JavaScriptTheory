@@ -69,7 +69,7 @@
  console.log(a)                  console.log(b)
         │                                │
         ▼                                ▼
-   undefined                    ❌ ReferenceError
+   undefined                     ReferenceError
         │
         ▼
  a = 10 (Initialized)
@@ -132,4 +132,43 @@ Skills            → Array (Object)
  Symbol
  BigInt
 ```
-              
+**Primtive data types** 
+
+>*Primitive values are immutable and store a single value.*
+
+**Each purpose of usage**
+> `String` A String is used to store text or characters. We define strings using single quotes, double quotes, or backticks.
+>**Example** let name = "Sneha";
+
+> `Number` A Number is used to store both integer and decimal values.
+>**Example**  let age = 25; let salary = 50000.50;
+
+>`Boolean` A Boolean represents only two values: true or false. It is commonly used for conditions and validations.
+>**Example** let isLoggedIn = true;
+
+>`Undefined` A variable that is declared but not assigned any value has the value undefined.
+>**Example** let city; console.log(city);
+
+>`Null` null represents an intentional empty value. We assign it when a variable currently has no value.
+>**Example** let manager = null;
+
+>`Symbol` A Symbol creates a unique value. It is mainly used to create unique object property keys.
+>**Example** const id = Symbol("id");
+
+>`BigInt`  BigInt is used to store very large integers that exceed the safe limit of the Number data type.
+>**Example** const amount = 123456789012345678901234567890n;
+
+**Non-Primitive Data Types**
+>*These store collections of values or more complex entities.*
+>
+```
+| Type     | Example        |
+| -------- | -------------- |
+| Object   | `{}`           |
+| Array    | `[]`           |
+| Function | `function(){}` |
+| Date     | `new Date()`   |
+
+```
+
+
