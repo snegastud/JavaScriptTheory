@@ -191,7 +191,7 @@ Skills            → Array (Object)
 
 **What is function?**
 
->A function is a reusable block of code designed to perform a specific task. Instead of writing the same logic multiple times, we write it once inside a function and call it whenever needed. This improves code reusability, readability, and maintainability."
+>A function is a reusable block of code designed to perform a specific task. Instead of writing the same logic multiple times, we write it once inside a function and call it whenever needed. This improves code reusability, readability, and maintainability. function is only run when its call. otherewise it doesn't run that function.
 
 **syntax**
 ```
@@ -201,5 +201,6 @@ function functionName(parameter1, parameter2) {
 
     return value;
 }
+// call the funtionName(passing the arguments)
 ```
 
