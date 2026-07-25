@@ -16,11 +16,21 @@
 
 >The main difference is in scope, reassignment, and redeclaration.
 
->`var` is function-scoped. It can be redeclared and reassigned, which can sometimes lead to unexpected behavior. Because of that, we generally avoid using var in modern JavaScript.
+>`var` is **function-scoped**. It can be redeclared and reassigned, which can sometimes lead to unexpected behavior. Because of that, we generally avoid using var in modern JavaScript.
 
->`let` is block-scoped. It can be reassigned, but it cannot be redeclared within the same scope. I use let whenever a value needs to change during execution.
+>`let` is **block-scoped**. It can be reassigned, but it cannot be redeclared within the same scope. I use let whenever a value needs to change during execution.
 
->`const` is also block-scoped. It cannot be redeclared or reassigned, so I use it for values that should remain constant throughout the execution.
+>`const` is also **block-scoped**. It cannot be redeclared or reassigned, so I use it for values that should remain constant throughout the execution.
 
 **Why don't you use var?**
 >`var` is function-scoped and allows both redeclaration and reassignment. In larger codebases, this can lead to accidental overwrites and make debugging more difficult. That's why modern JavaScript development generally prefers `let` and `const`.
+
+**what is variable scope?**
+>`Variable scope` Variable scope defines where a variable can be accessed in a program. We have block scope, function scope, and global scope.
+
+**Explain the each scope**
+>`function scope` function scope means a variable declared inside a function can only be accessed within that function." Give a tiny example, like a variable inside a function that's not accessible outside.
+
+>`block scope` it means a variable is only accessible inside a block, like an if statement or a for loop, and while switch.
+
+>`gobal scope` global scope means a variable declared outside all functions and blocks can be accessed from anywhere in the application.
