@@ -11,3 +11,8 @@
 >`For example,` in a registration form, when a user enters their name, email, and password, we store those values in variables. We then use those variables to perform validations, process the data, and send it to the backend through an API.
 
 >In JavaScript, we generally declare variables using let and const based on the requirement."
+
+**what is the difference between let,const,var?**
+>`var`-> its allow to redeclared,reassign the variable 
+>`let`->its allow to reassing the value which means modify that values. but i wont be redaclared
+>`const`->its a fixed value once its defined it cannot modify that values
