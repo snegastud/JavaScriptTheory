@@ -34,3 +34,65 @@
 >`block scope` it means a variable is only accessible inside a block, like an if statement or a for loop, and while switch.
 
 >`gobal scope` global scope means a variable declared outside all functions and blocks can be accessed from anywhere in the application.
+
+**Hosting flow**
+# Hoisting Flow
+
+```
+                 JavaScript Engine
+                        │
+                        ▼
+          ┌────────────────────────┐
+          │ Memory Creation Phase  │
+          └────────────────────────┘
+                        │
+        ┌───────────────┼────────────────┐
+        │                                │
+        ▼                                ▼
+   var a                           let b / const c
+        │                                │
+        ▼                                ▼
+ Memory Allocated                 Memory Allocated
+        │                                │
+        ▼                                ▼
+ a = undefined                     🔒 TDZ (Locked)
+        │                                │
+        └───────────────┬────────────────┘
+                        ▼
+          ┌────────────────────────┐
+          │  Code Execution Phase  │
+          └────────────────────────┘
+                        │
+        ┌───────────────┼────────────────┐
+        │                                │
+        ▼                                ▼
+ console.log(a)                  console.log(b)
+        │                                │
+        ▼                                ▼
+   undefined                    ❌ ReferenceError
+        │
+        ▼
+ a = 10 (Initialized)
+        │
+        ▼
+ console.log(a)
+        │
+        ▼
+        10
+```
+**What is Hoisting?**
+>`Hoisting` is JavaScript's behavior of processing variable and function declarations before the code is executed.
+
+>For var, memory is allocated and it's initialized with undefined, so accessing it before declaration returns undefined.
+
+>For let and const, they are also hoisted, but they remain in the Temporal Dead Zone until their declaration is reached. If we access them before declaration, JavaScript throws a ReferenceError."
+
+**what is TDZ ?**
+>Sure, let me explain.
+
+>The `Temporal Dead Zone (TDZ)` is the time when JavaScript has already created a let or const variable, but it hasn't initialized it yet.
+
+>If we try to access the variable before its declaration, JavaScript throws a ReferenceError.
+
+>The purpose of TDZ is to prevent us from accidentally using a variable before it's properly initialized."
+
