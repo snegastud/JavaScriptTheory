@@ -1,6 +1,6 @@
 # JavaScriptTheory
 **what is javascript? Can you explain what JavaScript is?**
-"Sure.
+
 
 >JavaScript is one of the core programming languages I've been working with to develop web applications. It's a single-threaded, event-driven language, and it supports asynchronous programming using Promises and async/await. In my projects, I mainly use JavaScript to implement business logic, process data, and integrate APIs
 
@@ -109,6 +109,27 @@
 Employee Age      → Number
 Is Active         → Boolean
 Employee Address  → Object
-Skills            → Array (Object)```
+Skills            → Array (Object)
 
+```
 >Each field stores a different type of data.
+
+**Types of data type?**
+```
+                 Data Types
+                     │
+         ┌───────────┴───────────┐
+         │                       │
+         ▼                       ▼
+   Primitive               Non-Primitive
+         │                       │
+         ▼                       ▼
+ String                 Object
+ Number                 Array
+ Boolean                Function
+ Undefined              Date
+ Null
+ Symbol
+ BigInt
+```
+              
