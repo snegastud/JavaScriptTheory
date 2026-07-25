@@ -12,7 +12,15 @@
 
 >In JavaScript, we generally declare variables using let and const based on the requirement."
 
-**what is the difference between let,const,var?**
->`var`-> its allow to redeclared,reassign the variable 
->`let`->its allow to reassing the value which means modify that values. but i wont be redaclared
->`const`->its a fixed value once its defined it cannot modify that values
+**what is the difference between let, const,var?**
+
+>The main difference is in scope, reassignment, and redeclaration.
+
+>`var` is function-scoped. It can be redeclared and reassigned, which can sometimes lead to unexpected behavior. Because of that, we generally avoid using var in modern JavaScript.
+
+>`let` is block-scoped. It can be reassigned, but it cannot be redeclared within the same scope. I use let whenever a value needs to change during execution.
+
+>`const` is also block-scoped. It cannot be redeclared or reassigned, so I use it for values that should remain constant throughout the execution.
+
+**Why don't you use var?**
+>`var` is function-scoped and allows both redeclaration and reassignment. In larger codebases, this can lead to accidental overwrites and make debugging more difficult. That's why modern JavaScript development generally prefers `let` and `const`.
