@@ -171,4 +171,14 @@ Skills            → Array (Object)
 
 ```
 
+**What is  is Dynamic Typing?**
+
+>"JavaScript is a dynamically typed language, which means we don't need to declare the data type of a variable. The data type is automatically determined based on the value assigned to it, and it can change during execution."
+
+**Primitive vs Non-Primitive?**
+
+>"Primitive data types store a single value and are immutable. They are compared by value.
+
+>Non-primitive data types store collections of values or more complex data. They are mutable and compared by reference."
+
 
