@@ -257,4 +257,42 @@ const greet = function () {
     console.log("Hello");
 };
 ```
+**what is call back function ?**
+>A callback function is a function that is passed as an argument to another function and is executed after the main function completes a specific task.The main purpose of using callbacks is to make functions reusable and flexible.This allows the same function to perform different operations without changing its implementation.
+>`For example`, after fetching employee data from an API, one screen might display the data, another might generate a report, and another might validate the response. Instead of creating separate fetch functions, we keep one generic function and pass different callback functions depending on the requirement.
+**Example coding**
+```
+>// Success callback
+function loginSuccess(user) {
+    console.log("Login Successful");
+    console.log(`Welcome ${user.userName}`);
+    console.log(`Role : ${user.role}`);
+}
 
+// Failure callback
+function loginFailure() {
+    console.log("Access Denied");
+}
+
+// Main function
+function login(username, onSuccess, onFailure) {
+
+    const user = {
+        userId: 101,
+        userName: "ADMIN",
+        role: "Administrator"
+    };
+
+    if (username === "ADMIN") {
+        onSuccess(user);      // Execute success callback
+    } else {
+        onFailure();          // Execute failure callback
+    }
+}
+
+// Function call
+login("ADMIN", loginSuccess, loginFailure);
+
+// Try this also
+// login("USER", loginSuccess, loginFailure);
+```
