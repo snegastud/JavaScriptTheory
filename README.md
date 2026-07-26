@@ -262,7 +262,7 @@ const greet = function () {
 >`For example`, after fetching employee data from an API, one screen might display the data, another might generate a report, and another might validate the response. Instead of creating separate fetch functions, we keep one generic function and pass different callback functions depending on the requirement.
 **Example coding**
 ```
->// Success callback
+// Success callback
 function loginSuccess(user) {
     console.log("Login Successful");
     console.log(`Welcome ${user.userName}`);
