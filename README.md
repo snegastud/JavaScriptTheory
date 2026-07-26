@@ -231,3 +231,15 @@ function add(a, b) {
 
 **REFERE MORE FUNCTION**
 >https://www.w3schools.com/js/js_arrow_function.asp
+
+**what we couldn't achieve the arrow function**
+>`Hoisting` "Arrow functions are function expressions, so they are not available before initialization.". If we can try to access it through the Reference error.
+
+>`this` "Arrow functions don't create their own this. They inherit this from the surrounding scope."
+
+>`Constructor` "Arrow functions cannot be used as constructors."
+
+>`When to Use` "I use arrow functions for callbacks, array methods, small utility functions, and asynchronous code where concise syntax improves readability."
+
+>`When Not to Use` "I avoid arrow functions as object methods or constructors when specific function behavior is required."
+
