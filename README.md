@@ -1,4 +1,4 @@
-# JavaScriptTheory
+# JavaScriptTheory (JS Version:v24.13.1 and JS RUNTIME:V8 engine)
 **what is javascript? Can you explain what JavaScript is?**
 
 
@@ -242,4 +242,19 @@ function add(a, b) {
 >`When to Use` "I use arrow functions for callbacks, array methods, small utility functions, and asynchronous code where concise syntax improves readability."
 
 >`When Not to Use` "I avoid arrow functions as object methods or constructors when specific function behavior is required."
+
+**anonymous function:**
+>"An anonymous function is simply a function without a name. A function expression is a function assigned to a variable. Most function expressions use anonymous functions, which is why these two concepts are often confused."
+
+**coding example**
+```
+// Anonymous Function
+function () {
+    console.log("Hello");
+}
+// Function Expression
+const greet = function () {
+    console.log("Hello");
+};
+```
 
