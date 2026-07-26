@@ -203,4 +203,19 @@ function functionName(parameter1, parameter2) {
 }
 // call the funtionName(passing the arguments)
 ```
+**what is function declartion ?**
+>`function declartion` is the function define using the function keyword and followed by the funtion name.its has one advandage `function is hosited`. before declartion we can call the function . function is reusable write once we can use whenever its needed. function only run when its called.
+```
+>function declarations are hoisted.
+console.log(add(10, 20));
 
+function add(a, b) {
+    return a + b;
+}
+
+```
+**what is function expression ?**
+>'function expression' is assign to a variable .unlike a normal function declartion, function expression is not fully hosited. we cannot access the function before declartion. if we try to access the before declartion it will throw that error like `ReferenceError`
+
+**What is the main difference between a Function Declaration and a Function Expression?**
+>The main difference is hoisting. A function declaration is fully hoisted, so it can be called before its declaration. A function expression is assigned to a variable, so it can only be called after the variable has been initialized
