@@ -219,3 +219,15 @@ function add(a, b) {
 
 **What is the main difference between a Function Declaration and a Function Expression?**
 >The main difference is hoisting. A function declaration is fully hoisted, so it can be called before its declaration. A function expression is assigned to a variable, so it can only be called after the variable has been initialized
+
+**What is arrow function?**
+>An arrow function is a shorter and more concise way of writing a function. It uses the => syntax instead of the function keyword. In my projects, I mainly use arrow functions because they improve code readability and are commonly used with callbacks and array methods."
+
+>**What is the difference between a normal function and an arrow function?**
+>The main difference is syntax. Arrow functions provide a shorter and cleaner way to write functions using the => syntax. In my projects, I mostly use arrow functions for callbacks and array methods because they improve readability. However, normal functions are still useful in scenarios where specific function behavior is required.
+
+>**Why was Arrow Function introduced?**
+>Arrow functions were introduced to reduce boilerplate code and make functions easier to write and read. They are especially useful for callbacks and array methods where concise syntax improves readability.
+
+**REFERE MORE FUNCTION**
+>https://www.w3schools.com/js/js_arrow_function.asp
