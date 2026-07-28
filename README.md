@@ -339,6 +339,7 @@ login("ADMIN", loginSuccess, loginFailure);
 >In asynchronous programming, JavaScript doesn't wait for long-running operations like API calls, database requests, or timers. Instead, it continues executing the remaining code, and once the operation completes, it handles the result later.
 
 >In my projects, whenever I consume backend APIs, I use asynchronous programming with Promises and async/await because it improves application performance and provides a better user experience."
+
 **What is Callback Hell?**
 
 >"Callback Hell is a situation where multiple callbacks are nested inside one another.
