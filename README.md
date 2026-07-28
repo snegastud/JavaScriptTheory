@@ -327,3 +327,44 @@ login("ADMIN", loginSuccess, loginFailure);
 >Once JavaScript encounters the return statement, it immediately stops executing the remaining code inside that function and returns the specified value.
 
 >For example, if I write a function to calculate the total amount, I use the return statement to send the calculated value back to wherever the function is called.
+
+**What is the difference between Synchronous and Asynchronous Programming?**
+
+>"JavaScript supports both synchronous and asynchronous programming.
+
+>In synchronous programming, the code executes line by line. Each statement waits until the previous statement finishes.
+
+>For example, if there are three tasks, Task 1 completes first, then Task 2, and finally Task 3.
+
+>In asynchronous programming, JavaScript doesn't wait for long-running operations like API calls, database requests, or timers. Instead, it continues executing the remaining code, and once the operation completes, it handles the result later.
+
+>In my projects, whenever I consume backend APIs, I use asynchronous programming with Promises and async/await because it improves application performance and provides a better user experience."
+**What is Callback Hell?**
+
+>"Callback Hell is a situation where multiple callbacks are nested inside one another.
+
+>As the number of callbacks increases, the code becomes deeply nested, difficult to read, difficult to debug, and hard to maintain.
+
+>For example, imagine a login process where we first validate the user, then fetch employee details, then retrieve permissions, and finally load dashboard data. If each step depends on the previous callback, the code becomes heavily nested.
+
+>Because of these readability and maintenance issues, Callback Hell is considered a problem.
+
+>To overcome Callback Hell, modern JavaScript introduced Promises and later async/await, which make asynchronous code much cleaner and easier to understand."
+
+**Why is Callback Hell considered a problem?**
+
+>"Callback Hell makes the code difficult to read because callbacks are nested multiple levels deep.
+
+>It also becomes difficult to debug, maintain, and extend the application. That's why nowadays we generally use Promises or async/await instead of deeply nested callbacks."
+
+**How do you solve Callback Hell?**
+
+>"There are multiple ways to solve Callback Hell.
+
+>The most common approaches are using Promises and async/await.
+
+>These approaches flatten the code structure, improve readability, simplify error handling, and make the code easier to maintain."
+
+**Which one do you prefer in your project?**
+
+>"In my projects, I mostly use async/await because the code looks very similar to synchronous code, making it much easier to read, understand, and maintain."
