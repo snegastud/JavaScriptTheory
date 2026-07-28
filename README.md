@@ -300,3 +300,30 @@ login("ADMIN", loginSuccess, loginFailure);
 // Try this also
 // login("USER", loginSuccess, loginFailure);
 ```
+**What are Parameters and Arguments?**
+
+>Parameters are the variables that we define in the function declaration. They act as placeholders to receive values.
+
+>Arguments are the actual values that we pass to the function when calling it.
+
+>For example, if I have a function like add(a, b), then a and b are parameters. When I call add(10, 20), then 10 and 20 are the arguments.
+
+>In simple terms, parameters are defined while creating the function, and arguments are passed while calling the function."
+
+**What are Default Parameters?**
+
+>"Default parameters allow us to assign a default value to a function parameter.
+
+>If the caller doesn't pass a value, JavaScript automatically uses the default value instead.
+
+>For example, if I write a function like greet(name = "Guest"), and I call greet() without passing any argument, the output will be 'Guest'.
+
+>In my projects, default parameters help avoid unnecessary undefined values and reduce extra validation code."
+
+**What is the Return Statement?**
+
+>"The return statement is used to send a value back to the function caller.
+
+>Once JavaScript encounters the return statement, it immediately stops executing the remaining code inside that function and returns the specified value.
+
+>For example, if I write a function to calculate the total amount, I use the return statement to send the calculated value back to wherever the function is called.
