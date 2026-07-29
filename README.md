@@ -500,4 +500,47 @@ array.filter((item, index) => {
 });
 
 ```
+**Does filter() return one object?**
+
+>It always `returns an array`, even if only one element matches.
+
+**What is find()?**
+
+>"find() is a built-in Higher-Order Function in JavaScript used to find the first element in an array that satisfies a given condition.
+
+>It executes the callback function for each element until it finds the first matching element. Once a match is found, it stops searching and returns that element.
+
+>If no element matches the condition, it returns undefined."
+
+**Why do we use find()?**
+
+We use find() when we need only one matching record.
+
+`Examples:`
+
+>Find an employee by ID
+>Find a product by Product ID
+>Find a customer by Email
+>Find an order by Order Number
+
+```
+syntax
+
+array.find(function(item){
+
+    return condition;
+
+});
+
+array.find(item => item.id === 101);
+
+```
+**Difference between filter() and find()?**
+
+| `filter()`                       | `find()`                                |
+| -------------------------------- | --------------------------------------- |
+| Returns all matching elements    | Returns only the first matching element |
+| Returns an array                 | Returns a single object/value           |
+| Continues checking every element | Stops after the first match             |
+
 
