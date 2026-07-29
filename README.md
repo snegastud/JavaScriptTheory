@@ -435,3 +435,36 @@ array.forEach((item, index) => {
 **Can we use break or continue inside forEach()?**
 
 "No. break and continue do not work inside forEach(). If we need to stop iteration early, we usually use a regular for loop or methods like find() or some() depending on the requirement."
+
+**What is map()?**
+
+>"map() is a built-in Higher-Order Function in JavaScript that is used to transform each element of an array and return a new array.
+
+>It executes the callback function for every element and stores the returned values in a new array.
+
+>Unlike forEach(), map() always returns a new array without modifying the original array."
+
+**Why do we use map()?**
+
+>We use map() when we want to:
+>Transform data
+>Modify values
+>Create a new array
+>without changing the original array.
+
+```
+`syntax`
+
+array.map(function(item, index) {
+
+    return modifiedValue;
+
+});
+
+array.map((item, index) => {
+
+    return modifiedValue;
+
+});
+
+```
