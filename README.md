@@ -695,3 +695,50 @@ Rejected
 >If the operation fails, the Promise moves to the Rejected state and returns an error."
 
 >Once a Promise is fulfilled or rejected, its state cannot change again."
+
+**then() catch(), finally()?**
+
+>then()=>then() block its handle the reslove state . and then its always return the new promise . we can perfrom the multiple async operations  so its called as a `promise chaning`.
+
+>catch()=> catch() block its handle the reject state. and catch its retrun the error state. 
+
+>finally()=>finally() method is used to execute cleanup code after a Promise completes. its regradless the its reject or fullfield . it's commonly used to hide loaders, close connections, or perform cleanup tasks."
+
+**What is Promise Chaining?**
+
+>"Promise Chaining is the process of executing multiple asynchronous operations one after another using multiple .then() methods. Since every .then() returns a new Promise, we can chain multiple .then() methods together. The output of one .then() becomes the input of the next .then()."
+
+```
+function login() {
+    return Promise.resolve("Login Successful");
+}
+
+login()
+    .then((result) => {
+        console.log(result);
+
+        return "Fetching Employee...";
+    })
+    .then((employee) => {
+        console.log(employee);
+
+        return "Fetching Department...";
+    })
+    .then((department) => {
+        console.log(department);
+
+        return "Fetching Salary...";
+    })
+    .then((salary) => {
+        console.log(salary);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+output:
+Login Successful
+Fetching Employee...
+Fetching Department...
+Fetching Salary...
+```
+
