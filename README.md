@@ -591,7 +591,36 @@ array.reduce(function(accumulator, currentValue) {
 | `find()`   | Find first matching element        | Single object/value |
 | `reduce()` | Combine all values into one result | Single value        |
 
+**What is Lexical Scope?**
 
+>"Lexical Scope means a function can access variables from its own scope and its outer scope.
 
+>In simple terms, an inner function can access variables from its parent function and the global scope, but a parent function cannot access variables declared inside its child function."
 
+`example`
+```
+let company = "SAP";
+
+function project() {
+
+    let projectName = "Product Cart";
+
+    function developer() {
+
+        console.log(company);
+        console.log(projectName);
+
+    }
+
+    developer();
+
+}
+
+project();
+
+"In this example, the developer() function is defined inside the project() function. Since it's written inside project(), it can access the projectName variable from its parent function and the company variable from the global scope.
+
+This behavior is called Lexical Scope.
+
+```
 
