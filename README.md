@@ -468,3 +468,36 @@ array.map((item, index) => {
 });
 
 ```
+**What is filter()?**
+
+>"filter() is a built-in Higher-Order Function in JavaScript that is used to filter elements from an array based on a condition.
+
+>It executes the callback function for every element. If the condition returns true, the element is included in the new array. If it returns false, the element is excluded.
+
+>filter() always returns a new array and does not modify the original array."
+
+**Why do we use filter()?**
+
+`We use filter() when we want to:`
+
+>Search data
+>Filter active users
+>Filter products
+>Filter employees
+>Filter records based on a condition.
+
+```
+array.filter(function(item, index){
+
+    return condition;
+
+});
+
+array.filter((item, index) => {
+
+    return condition;
+
+});
+
+```
+
