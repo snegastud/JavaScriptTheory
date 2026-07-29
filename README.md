@@ -741,4 +741,39 @@ Fetching Employee...
 Fetching Department...
 Fetching Salary...
 ```
+**What is Promise.all()?**
+>"The Promise.all() method is used to execute multiple Promises in parallel. It waits until all the Promises are completed successfully. If every Promise is fulfilled, it returns all the results as an array. If any one Promise is rejected, Promise.all() immediately rejects and returns that error."
+
+`Imagine your dashboard needs to load:`
+
+>Employee Details
+>Department Details
+>Project Details
+
+>These three API calls are independent.
+
+>Instead of calling them one after another, we can call them simultaneously.This improves performance because all three requests run at the same time.
+
+>Even though two Promises succeeded,one rejection causes the entire Promise.all() to fail.
+
+`Example`
+
+```
+const employeePromise = Promise.resolve("Employee Data");
+const departmentPromise = Promise.resolve("Department Data");
+const projectPromise = Promise.resolve("Project Data");
+
+Promise.all([
+    employeePromise,
+    departmentPromise,
+    projectPromise
+])
+.then((result) => {
+    console.log(result);
+})
+.catch((error) => {
+    console.log(error);
+});
+
+```
 
