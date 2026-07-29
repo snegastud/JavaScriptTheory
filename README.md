@@ -543,4 +543,55 @@ array.find(item => item.id === 101);
 | Returns an array                 | Returns a single object/value           |
 | Continues checking every element | Stops after the first match             |
 
+**What happens if no record is found?**
+
+>find() returns undefined if no element satisfies the condition."
+
+**When would you use find() instead of filter()?**
+
+>"I use find() when I need only one matching record, such as searching for an employee by ID or a product by Product ID. Since find() stops after the first match, it's more efficient than filter(), which checks the entire array and returns all matching elements."
+
+**What is reduce()?**
+
+>"reduce() is a built-in Higher-Order Function in JavaScript used to reduce an array into a single value.
+
+>It executes a callback function for each element and accumulates the result into one final value.
+
+>We commonly use reduce() to calculate totals, sums, averages, counts, or to transform an array into a single object."
+
+**Why do we use reduce()?**
+
+>Whenever you need one final result from an array.
+
+`Examples:`
+
+>Total salary
+>Total cart amount
+>Total order value
+>Count employees
+>Group data
+
+```
+syntax:
+
+array.reduce(function(accumulator, currentValue) {
+
+    return updatedAccumulator;
+
+}, initialValue);
+
+```
+**Difference between map(), filter(), find(), and reduce()?**
+
+
+| Method     | Purpose                            | Returns             |
+| ---------- | ---------------------------------- | ------------------- |
+| `map()`    | Transform data                     | New array           |
+| `filter()` | Filter data                        | New array           |
+| `find()`   | Find first matching element        | Single object/value |
+| `reduce()` | Combine all values into one result | Single value        |
+
+
+
+
 
