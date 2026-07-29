@@ -660,7 +660,7 @@ display();
 
 >To solve this problem, JavaScript introduced Promises.
 
->A Promise represents the future result of an asynchronous operation. It doesn't return the result immediately. Instead, it waits for the operation to complete and finally returns either a successful response or an error."
+>A Promise represents the future result of an asynchronous operation. It doesn't return the result immediately. Instead, it waits for the operation to complete and finally returns either a successful response or an error." "So, instead of blocking the execution, JavaScript continues executing other code and processes the Promise once the response is available."
 
 **Can you give a real-time example?**
 
