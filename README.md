@@ -412,4 +412,26 @@ array.forEach((item, index) => {
 });
 
 ```
+**What is forEach()?**
 
+>"forEach() is a built-in Higher-Order Function in JavaScript used to iterate through each element of an array.
+
+>It executes a callback function once for every element in the array.
+
+>Unlike map(), forEach() does not return a new array. It is mainly used when we want to perform an operation on each element, such as displaying data, logging values, or updating the UI."
+
+**When do we use forEach()?**
+
+`Use it when you want to:`
+
+>Display each item
+>Log values
+>Update the UI
+
+**Does forEach() return a new array?**
+
+>"No. forEach() does not return a new array. It simply executes the callback function for each element."
+
+**Can we use break or continue inside forEach()?**
+
+"No. break and continue do not work inside forEach(). If we need to stop iteration early, we usually use a regular for loop or methods like find() or some() depending on the requirement."
