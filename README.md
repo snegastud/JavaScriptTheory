@@ -369,3 +369,47 @@ login("ADMIN", loginSuccess, loginFailure);
 **Which one do you prefer in your project?**
 
 >"In my projects, I mostly use async/await because the code looks very similar to synchronous code, making it much easier to read, understand, and maintain."
+
+**Higher order function?**
+>"A Higher-Order Function is a function that either accepts another function as an argument, returns another function, or both.
+
+>The main purpose of using Higher-Order Functions is to make the code more reusable and flexible.
+
+>In my project, for example, I have a common function to fetch employee data. Different screens need different operations after fetching the data. One screen displays the employee details, another generates a report, and another exports the data.
+
+>Instead of writing separate fetch functions for each operation, I create one common function and pass different callback functions based on the requirement. Because that function accepts another function as an argument, it is called a Higher-Order Function."
+
+**What is the difference between a Callback Function and a Higher-Order Function?**
+>"A Callback Function is a function that is passed as an argument to another function and is executed later.
+
+>A Higher-Order Function is a function that accepts another function as an argument, returns another function, or both.
+
+>In simple terms, the Callback Function is the function being passed, whereas the Higher-Order Function is the function receiving or returning another function."
+
+```
+Higher-Order Function → Receives Function
+
+Callback Function → Passed Function
+
+```
+**Which one executes first?**
+
+>"The Higher-Order Function executes first. Inside it, whenever required, it invokes the Callback Function."
+
+**Built-in Higher-Order Functions?**
+
+>forEach(),map(),filter(),find(),reduce()
+
+>`syntax`
+
+```
+array.forEach(function(item, index){
+
+});
+
+array.forEach((item, index) => {
+
+});
+
+```
+
