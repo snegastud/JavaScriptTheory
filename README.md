@@ -623,4 +623,32 @@ project();
 This behavior is called Lexical Scope.
 
 ```
+**What is a Closure?**
+
+>"A Closure is created when an inner function remembers and can access the variables of its outer function even after the outer function has finished executing.
+
+```
+function outer() {
+
+    let message = "Hello";
+
+    function inner() {
+
+        console.log(message);
+
+    }
+
+    return inner;
+
+}
+
+const display = outer();
+
+display();
+
+```
+*`difference between closure and lexical scope`*
+
+>Lexical Scope → An inner function can access variables from its outer function.
+>Closure → An inner function remembers those outer variables even after the outer function has finished executing.
 
