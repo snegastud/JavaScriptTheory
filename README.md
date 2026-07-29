@@ -671,3 +671,11 @@ display();
 >If the backend successfully returns the employee data, the Promise becomes Fulfilled, and I display the data in the UI.
 
 >If the API fails because of a network issue or server error, the Promise becomes Rejected, and I handle the error by showing an appropriate message to the user.
+
+**If callbacks can already handle success and failure, why were Promises introduced?**
+
+>For example, suppose I need to perform four asynchronous tasks in sequence. The second task depends on the first, the third depends on the second, and the fourth depends on the third. Using callbacks, each operation has to be written inside the previous callback, making the code deeply nested. This is known as Callback Hell.
+
+>As the application grows, the code becomes difficult to read, debug, and maintain. We also end up writing error handling repeatedly for each callback.
+
+>Promises were introduced to solve this problem. They allow us to chain asynchronous operations using .then() and handle errors in one place using .catch(). This results in cleaner, more readable, and maintainable code."
