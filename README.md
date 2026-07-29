@@ -679,3 +679,19 @@ display();
 >As the application grows, the code becomes difficult to read, debug, and maintain. We also end up writing error handling repeatedly for each callback.
 
 >Promises were introduced to solve this problem. They allow us to chain asynchronous operations using .then() and handle errors in one place using .catch(). This results in cleaner, more readable, and maintainable code."
+
+**What are the states of a Promise?**
+
+"A Promise has three states:
+
+Pending
+Fulfilled
+Rejected
+
+>When a Promise is created, it starts in the Pending state because the asynchronous operation is still in progress.
+
+>If the operation completes successfully, the Promise moves to the Fulfilled state and returns the result.
+
+>If the operation fails, the Promise moves to the Rejected state and returns an error."
+
+>Once a Promise is fulfilled or rejected, its state cannot change again."
