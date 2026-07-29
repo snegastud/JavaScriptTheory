@@ -652,3 +652,22 @@ display();
 >Lexical Scope → An inner function can access variables from its outer function.
 >Closure → An inner function remembers those outer variables even after the outer function has finished executing.
 
+**What is a Promise?**
+
+>"In my project, whenever I call a backend API or an external service, JavaScript doesn't get the response immediately because those operations are asynchronous. It has to wait for the server to process the request and send back the response.
+
+>Before Promises, we mainly handled these asynchronous operations using callbacks. When multiple API calls depended on each other, the code became deeply nested, making it difficult to read, debug, and maintain. This problem is called Callback Hell.
+
+>To solve this problem, JavaScript introduced Promises.
+
+>A Promise represents the future result of an asynchronous operation. It doesn't return the result immediately. Instead, it waits for the operation to complete and finally returns either a successful response or an error."
+
+**Can you give a real-time example?**
+
+>In my SAP CAP application, when the user opens the Employee screen, my UI5 application calls the CAP backend to fetch employee data.
+
+>Since the backend takes some time to respond, JavaScript cannot return the data immediately. At that moment, the API returns a Promise. While the Promise is in progress, it's in the Pending state.
+
+>If the backend successfully returns the employee data, the Promise becomes Fulfilled, and I display the data in the UI.
+
+>If the API fails because of a network issue or server error, the Promise becomes Rejected, and I handle the error by showing an appropriate message to the user.
