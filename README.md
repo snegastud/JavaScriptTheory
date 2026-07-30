@@ -927,4 +927,37 @@ Promise.any([server1,server2])
 
 **Why was Async/Await introduced if Promises already exist?**
 
->
+>"Promises solved the Callback Hell problem, but when an application has many dependent asynchronous operations, using multiple .then() methods can still make the code difficult to read and maintain.
+
+>Async/Await was introduced to make asynchronous code look like synchronous code. It improves readability, simplifies debugging, and makes error handling easier using a single try...catch block."
+
+**What are the advantages of Async/Await?**
+
+`The main advantages are:`
+
+>Cleaner and more readable code.
+>Easier to understand because it looks like synchronous code.
+>Simpler error handling using one try...catch block.
+>Easier to debug because execution flows line by line."
+
+| Promise                                   | Async/Await                                  |
+| ----------------------------------------- | -------------------------------------------- |
+| Uses `.then()` and `.catch()`             | Uses `async`, `await`, and `try...catch`     |
+| Can become long with many `.then()` calls | Looks like normal synchronous code           |
+| Error handling with `.catch()`            | Error handling with `try...catch`            |
+| Good for chaining                         | Better readability for sequential operations |
+
+**How do you handle errors in Async/Await?**
+
+>"In Async/Await, I handle errors using a try...catch block. I place the asynchronous code inside the try block. If all operations are successful, the code executes normally. If any Promise is rejected or an error occurs, execution immediately moves to the catch block, where I handle the error."
+
+**when will execute the catch block?**
+
+>Network fails
+>Backend returns 500
+>Server is down
+>Execution automatically goes to: catch(error).
+
+**Example answer**
+>"In my project, I use try...catch to handle errors while working with asynchronous operations like API calls. I place all the await statements inside the try block. If every API call is successful, the code continues executing normally. If any API fails due to a network issue, server error, or invalid response, JavaScript immediately stops executing the remaining code inside the try block and moves to the catch block. Inside the catch block, I handle the error by logging it or displaying an appropriate error message to the user."
+
