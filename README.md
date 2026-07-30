@@ -777,3 +777,140 @@ Promise.all([
 
 ```
 
+**What is Promise.allSettled()?**
+
+>"The Promise.allSettled() method is used to execute multiple Promises in parallel. Unlike Promise.all(), it waits for all Promises to complete, regardless of whether they are fulfilled or rejected. Instead of failing immediately, it returns the status and result of every Promise."
+
+**Why was it introduced?**
+
+```
+Imagine this scenario:
+
+Your application loads
+
+Employee API 
+Department API 
+Project API 
+
+Using
+
+Promise.all()
+
+the entire operation fails because one API failed.
+
+Sometimes we don't want that.
+
+We want to know
+
+Which API succeeded?
+Which API failed?
+
+That's why JavaScript introduced
+
+Promise.allSettled()
+
+```
+`Example coding`
+
+const employee = Promise.resolve("Employee Loaded");
+
+const department = Promise.reject("Department Failed");
+
+const project = Promise.resolve("Project Loaded");
+
+Promise.allSettled([
+    employee,
+    department,
+    project
+])
+.then((result) => {
+
+    console.log(result);
+
+});
+
+```
+**When do you use Promise.allSettled()?**
+
+"I use Promise.allSettled() when I need the result of every asynchronous operation, even if some of them fail."
+
+**What is Promise.race()?**
+
+>"The Promise.race() method executes multiple Promises in parallel and returns the result of the Promise that settles first, whether it is fulfilled or rejected. It doesn't wait for the remaining Promises."
+
+```
+Real-Time Example
+
+Suppose your application calls data from two servers.
+
+Server 1
+Server 2
+
+Whichever server responds first,
+
+your application uses that response.
+
+That's exactly what Promise.race() does.
+
+```
+const server1 = new Promise((resolve) => {
+
+    setTimeout(() => {
+        resolve("Server 1 Response");
+    }, 3000);
+
+});
+
+const server2 = new Promise((resolve) => {
+
+    setTimeout(() => {
+        resolve("Server 2 Response");
+    }, 1000);
+
+});
+
+Promise.race([server1, server2])
+.then((result) => {
+
+    console.log(result);
+
+});
+
+```
+**What is Promise.any()?**
+
+
+"The Promise.any() method executes multiple Promises in parallel and returns the first successfully fulfilled Promise. It ignores rejected Promises and continues waiting until one Promise succeeds."
+
+If every Promise fails.**It throws anAggregateError because all Promises failed.**
+```
+const server1 = Promise.reject("Server 1 Failed");
+
+const server2 = new Promise((resolve) => {
+
+    setTimeout(() => {
+
+        resolve("Server 2 Success");
+
+    },1000);
+
+});
+
+Promise.any([server1,server2])
+
+.then((result)=>{
+
+    console.log(result);
+
+});
+
+```
+
+**difference between promise.race() and promise.any()?**
+
+| Promise.race()                                 | Promise.any()                 |
+| ---------------------------------------------- | ----------------------------- |
+| First settled Promise wins                     | First successful Promise wins |
+| Success or Failure                             | Success only                  |
+| If first Promise rejects → rejects immediately | Ignores rejected Promises     |
+| Waits for first settled                        | Waits for first fulfilled     |
