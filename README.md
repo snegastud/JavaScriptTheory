@@ -832,7 +832,7 @@ Promise.allSettled([
 ```
 **When do you use Promise.allSettled()?**
 
-"I use Promise.allSettled() when I need the result of every asynchronous operation, even if some of them fail."
+>"I use Promise.allSettled() when I need the result of every asynchronous operation, even if some of them fail."
 
 **What is Promise.race()?**
 
@@ -880,9 +880,9 @@ Promise.race([server1, server2])
 **What is Promise.any()?**
 
 
-"The Promise.any() method executes multiple Promises in parallel and returns the first successfully fulfilled Promise. It ignores rejected Promises and continues waiting until one Promise succeeds."
+>"The Promise.any() method executes multiple Promises in parallel and returns the first successfully fulfilled Promise. It ignores rejected Promises and continues waiting until one Promise succeeds."
 
-If every Promise fails.**It throws anAggregateError because all Promises failed.**
+>If every Promise fails.**It throws anAggregateError because all Promises failed.**
 ```
 const server1 = Promise.reject("Server 1 Failed");
 
@@ -914,3 +914,17 @@ Promise.any([server1,server2])
 | Success or Failure                             | Success only                  |
 | If first Promise rejects → rejects immediately | Ignores rejected Promises     |
 | Waits for first settled                        | Waits for first fulfilled     |
+
+**What is async in JavaScript?**
+
+>Async/Await is just a cleaner way of writing Promise code.
+
+>"The async keyword is used to declare an asynchronous function. An async function always returns a Promise,
+
+**What is await?**
+
+>"await is used inside an async function to pause the execution until a Promise is completed. Once the Promise is fulfilled, await returns the resolved value and continues executing the remaining code."
+
+**Why was Async/Await introduced if Promises already exist?**
+
+>
