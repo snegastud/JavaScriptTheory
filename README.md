@@ -1033,3 +1033,64 @@ setTimeout(() => {
 **Why does Promise.then() execute before setTimeout()?**
 
 >"Promise.then() callbacks are stored in the Microtask Queue, while setTimeout() callbacks are stored in the Callback Queue (Macrotask Queue). The Event Loop always gives higher priority to the Microtask Queue. Therefore, once the Call Stack becomes empty, all microtasks are executed first, and only then are macrotasks executed."
+
+**What is the Event Loop?**
+ 
+>"The Event Loop is a mechanism that continuously monitors the Call Stack and the task queues. Whenever the Call Stack becomes empty, it first checks the Microtask Queue and executes all pending microtasks. Once the Microtask Queue is empty, it checks the Callback Queue (Macrotask Queue) and moves one callback into the Call Stack for execution. This process repeats continuously, allowing JavaScript to handle asynchronous operations efficiently."
+
+```
+                    JavaScript Code
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │ Call Stack  │
+                    └─────────────┘
+                           │
+          ┌────────────────┴────────────────┐
+          │                                 │
+          │ Synchronous Code                │ Asynchronous Code
+          │ (console.log, functions)        │ (setTimeout, fetch...)
+          │                                 │
+          ▼                                 ▼
+     Execute Immediately             ┌─────────────────┐
+                                     │ Browser Web APIs│
+                                     └─────────────────┘
+                                              │
+                          ┌───────────────────┴───────────────────┐
+                          │                                       │
+                          ▼                                       ▼
+                Microtask Queue                          Callback Queue
+             (Higher Priority)                      (Macrotask Queue)
+             -------------------                    -------------------
+             Promise.then()                         setTimeout()
+             Promise.catch()                        setInterval()
+             Promise.finally()                      DOM Events
+             queueMicrotask()                       MessageChannel
+                          │                                       │
+                          └───────────────┬───────────────────────┘
+                                          ▼
+                                   ┌──────────────┐
+                                   │ Event Loop   │
+                                   └──────────────┘
+                                          │
+                                          ▼
+                           Is Call Stack Empty?
+                                          │
+                                  Yes     ▼
+                                   │  Execute ALL
+                                   │  Microtasks
+                                   │
+                                   ▼
+                          Execute ONE Callback
+                          from Callback Queue
+                                   │
+                                   ▼
+                              Call Stack
+                                   │
+                                   ▼
+                               Execute
+                                   │
+                                   ▼
+                                 Repeat
+
+```
