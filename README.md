@@ -965,4 +965,5 @@ Promise.any([server1,server2])
 
 >"In my project, I use try...catch around API calls to handle network errors, backend exceptions, or invalid responses, so the application can show a meaningful message to the user instead of failing silently."
 
-
+**What are Web APIs?**
+>
