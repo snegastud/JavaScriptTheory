@@ -1096,6 +1096,7 @@ setTimeout(() => {
 ```
 **What is an Object?**
 
->"An object is a collection of related data and behavior. It stores information in the form of key-value pairs. In real-time projects, we use objects to represent real-world entities like an employee, customer, product, or order. Along with data, an object can also contain methods to perform operations related to that data."
+>"An object is a collection of related data and behavior. It stores information in the form of key-value pairs. In real-time projects, we use objects to represent real-world entities like an employee, customer, product, or order. Along with data, an object can also contain methods to perform operations related to that data." `REFERENECE :VS CODE`
 
-
+**Object Destructuring?**
+>
