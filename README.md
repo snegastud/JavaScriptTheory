@@ -965,5 +965,46 @@ Promise.any([server1,server2])
 
 >"In my project, I use try...catch around API calls to handle network errors, backend exceptions, or invalid responses, so the application can show a meaningful message to the user instead of failing silently."
 
+**What is call stack?**
+
+>"The Call Stack is a LIFO data structure used by the JavaScript engine to manage function execution. Every time a function is called, it is pushed onto the stack. After execution completes, it is popped from the stack. Since JavaScript is single-threaded, only one function executes at a time."
+
 **What are Web APIs?**
->
+>Web APIs are provided by web browser not by java script such as
+```
+>                Browser
+        ----------------------
+        |      Web APIs      |
+        |--------------------|
+        | setTimeout()       |
+        | setInterval()      |
+        | fetch()            |
+        | DOM Events         |
+        | Local Storage      |
+        | Geolocation        |
+        ----------------------
+                 ▲
+                 |
+          JavaScript Engine
+```
+example:
+
+>Web APIs are browser features used to handle asynchronous operations. For example, when JavaScript executes setTimeout(), it doesn't wait for the timer. Instead, it gives that task to the browser. After the timer finishes, the browser sends the callback function back to JavaScript, and it gets executed when the Call Stack is free.
+
+**Real-Time Example**
+
+Suppose you write:
+
+setTimeout(() => {
+    console.log("Hello");
+}, 2000);
+
+**What happens?**
+
+>setTimeout() enters the Call Stack.
+>The browser recognizes it as a Web API.
+>The browser starts a 2-second timer.
+>Meanwhile, the Call Stack continues executing the remaining JavaScript code.
+>After 2 seconds, the callback is moved to the Callback Queue.
+>The Event Loop checks whether the Call Stack is empty.
+>If it's empty, the callback is pushed into the Call Stack and executed.
