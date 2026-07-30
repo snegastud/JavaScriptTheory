@@ -961,3 +961,8 @@ Promise.any([server1,server2])
 **Example answer**
 >"In my project, I use try...catch to handle errors while working with asynchronous operations like API calls. I place all the await statements inside the try block. If every API call is successful, the code continues executing normally. If any API fails due to a network issue, server error, or invalid response, JavaScript immediately stops executing the remaining code inside the try block and moves to the catch block. Inside the catch block, I handle the error by logging it or displaying an appropriate error message to the user."
 
+**Why do we use try...catch?**
+
+>"In my project, I use try...catch around API calls to handle network errors, backend exceptions, or invalid responses, so the application can show a meaningful message to the user instead of failing silently."
+
+
