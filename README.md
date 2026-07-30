@@ -989,7 +989,7 @@ Promise.any([server1,server2])
 ```
 example:
 
->Web APIs are browser features used to handle asynchronous operations. For example, when JavaScript executes setTimeout(), it doesn't wait for the timer. Instead, it gives that task to the browser. After the timer finishes, the browser sends the callback function back to JavaScript, and it gets executed when the Call Stack is free.
+>Web APIs are browser features used to handle asynchronous operations. For example, when JavaScript executes setTimeout(), it doesn't wait for the timer. Instead, it gives that task to the browser. "After the timer finishes, the browser places the callback function into the Callback Queue (Macrotask Queue). The Event Loop checks whether the Call Stack is empty. If it is empty, the Event Loop moves the callback from the Callback Queue into the Call Stack for execution."
 
 **Real-Time Example**
 
@@ -1008,3 +1008,28 @@ setTimeout(() => {
 >After 2 seconds, the callback is moved to the Callback Queue.
 >The Event Loop checks whether the Call Stack is empty.
 >If it's empty, the callback is pushed into the Call Stack and executed.
+
+**What is the Callback Queue?**
+
+>"The Callback Queue, also called the Macrotask Queue, is a queue where completed asynchronous callback functions wait before they are executed. When an asynchronous operation like setTimeout() or a DOM event finishes, its callback is placed into the Callback Queue. The callback doesn't execute immediately. It waits until the Call Stack becomes empty. Then the Event Loop moves the callback into the Call Stack for execution."
+
+**What is the Microtask Queue?**
+
+
+>"The Microtask Queue is a special queue that stores high-priority asynchronous callbacks. Callbacks created by Promises, queueMicrotask(), and MutationObserver are placed in the Microtask Queue. Before processing the Callback Queue (Macrotask Queue), the Event Loop always checks and executes all tasks in the Microtask Queue first."
+
+| **Feature**         | **Microtask Queue**                            | **Callback Queue (Macrotask Queue)** |
+| ------------------- | ---------------------------------------------- | ------------------------------------ |
+| **Priority**        | High Priority                                  | Low Priority                         |
+| **Executed When**   | Immediately after the Call Stack becomes empty | After all Microtasks are completed   |
+| **Processed By**    | Event Loop                                     | Event Loop                           |
+| **Common APIs**     | `Promise.then()`                               | `setTimeout()`                       |
+|                     | `Promise.catch()`                              | `setInterval()`                      |
+|                     | `Promise.finally()`                            | DOM Events (`click`, `change`)       |
+|                     | `queueMicrotask()`                             | `MessageChannel` (less common)       |
+|                     | `MutationObserver` (rare)                      | `postMessage` (less common)          |
+| **Execution Order** | Executes first                                 | Executes after Microtasks            |
+
+**Why does Promise.then() execute before setTimeout()?**
+
+>"Promise.then() callbacks are stored in the Microtask Queue, while setTimeout() callbacks are stored in the Callback Queue (Macrotask Queue). The Event Loop always gives higher priority to the Microtask Queue. Therefore, once the Call Stack becomes empty, all microtasks are executed first, and only then are macrotasks executed."
