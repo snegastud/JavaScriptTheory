@@ -1099,4 +1099,9 @@ setTimeout(() => {
 >"An object is a collection of related data and behavior. It stores information in the form of key-value pairs. In real-time projects, we use objects to represent real-world entities like an employee, customer, product, or order. Along with data, an object can also contain methods to perform operations related to that data." `REFERENECE :VS CODE`
 
 **Object Destructuring?**
->
+>"Object destructuring is an ES6 feature that allows us to extract object properties directly into variables. Instead of accessing each property using dot notation multiple times, we can extract all the required properties in a single line. It makes the code cleaner, more readable, and easier to maintain. In my project, I mainly use object destructuring while handling backend API responses and CAP request data."
+
+**What is the Spread Operator?**
+>"The spread operator is an ES6 feature that I mainly use to create a copy of an object, merge multiple objects, or update specific properties without modifying the original object. Instead of manually copying each property, I can copy the entire object in a single line, which makes the code cleaner and easier to maintain."
+
+
