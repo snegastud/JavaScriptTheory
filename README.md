@@ -1140,3 +1140,62 @@ const copy = structuredClone(employee);
 **Best Closing Statement**
 
 >"So, in my project, I use shallow copy for simple property updates because it's efficient. Whenever the object contains nested data and I need complete isolation between the original and copied object, I use a deep copy."
+
+**What is JSON? Where have you used it in your project?**
+
+
+>"JSON stands for JavaScript Object Notation. It is a lightweight format used to exchange data between the frontend and the backend. In my SAP UI5 and CAP project, whenever the UI communicates with the CAP service through APIs, the request and response data are transferred in JSON format."
+
+`Example`
+
+>"For example, in my project, when a user creates a new employee from the SAP UI5 application, they enter details like employee ID, name, department, and salary. After clicking the Save button, the UI sends those details to the CAP backend as JSON."
+
+**What is JSON.stringify()?**
+
+>"Whenever the user enters details in the UI, JavaScript first creates an object with those values. Before sending the data to the backend through an API, that object needs to be converted into a JSON string because HTTP communication happens using JSON. JSON.stringify() is the JavaScript method used for that conversion. In my SAP UI5 and CAP project, I don't call JSON.stringify() manually because the framework handles it automatically, but internally this conversion happens before the request is sent to the backend."
+
+**What is JSON.parse()?**
+
+>"JSON.parse() is used to convert a JSON string into a JavaScript object. After receiving a response from the backend, the JSON data needs to be converted into an object so that we can access its properties and use it in the application. In my SAP UI5 and CAP project, I don't call JSON.parse() manually because the framework automatically performs this conversion before the response reaches my application."
+
+`Serialization` means converting an object into a JSON string so it can be sent to a server or stored.
+`Deserialization` means converting that JSON string back into a JavaScript object so we can use it in our application.
+
+**What is an Array?**
+>"An array is a built-in JavaScript data structure used to store multiple values in a single variable. Each value is stored at a specific index, starting from 0. Arrays help us manage collections of related data efficiently."
+
+```
+How to Create an Array?
+
+const employees = [];
+
+const employees = new Array();
+
+```
+**What is push()?**
+
+>"push() is a built-in JavaScript array method used to add one or more elements to the end of an array. It modifies the original array and returns the new length of the array."
+
+**What is pop()?**
+
+>"pop() is a built-in JavaScript array method used to remove the last element from an array. It modifies the original array and returns the removed element."
+
+**What is shift()?**
+
+>"shift() is a built-in JavaScript array method used to remove the first element from an array. It modifies the original array and returns the removed element."
+
+**What is unshift()?**
+
+>"unshift() is a built-in JavaScript array method used to add one or more elements to the beginning of an array. It modifies the original array and returns the new length of the array."
+
+**Array itreation methods**
+
+```
+
+for loop
+for...of
+forEach()
+
+```
+
+
