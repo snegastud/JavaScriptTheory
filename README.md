@@ -419,6 +419,7 @@ array.forEach((item, index) => {
 >It executes a callback function once for every element in the array.
 
 >Unlike map(), forEach() does not return a new array. It is mainly used when we want to perform an operation on each element, such as displaying data, logging values, or updating the UI."
+> It is mainly used when we want to perform an action on each element without creating a new array."
 
 **When do we use forEach()?**
 
@@ -1198,4 +1199,42 @@ forEach()
 
 ```
 
+``` ARRAY METHODS ```
 
+| Method          | Purpose                                | Returns                      | Modifies Original Array? | CAP Real-Time Use                         |
+| --------------- | -------------------------------------- | ---------------------------- | ------------------------ | ----------------------------------------- |
+| `push()`        | Add element at end                     | New length                   | ✅ Yes                    | Add a temporary record                    |
+| `pop()`         | Remove last element                    | Removed element              | ✅ Yes                    | Remove last processed record              |
+| `shift()`       | Remove first element                   | Removed element              | ✅ Yes                    | Remove first queued record                |
+| `unshift()`     | Add element at beginning               | New length                   | ✅ Yes                    | Insert priority record                    |
+| `forEach()`     | Perform an action on every element     | `undefined`                  | ❌ No                     | Logging, validation, auditing             |
+| `map()`         | Transform each element                 | New array                    | ❌ No                     | Format API response                       |
+| `filter()`      | Select matching elements               | New array                    | ❌ No                     | Return only active employees              |
+| `find()`        | Return first matching element          | Object / Value / `undefined` | ❌ No                     | Find employee by ID                       |
+| `findIndex()`   | Return index of first matching element | Index / `-1`                 | ❌ No                     | Find record position before update/delete |
+| `some()`        | Check if at least one element matches  | `true` / `false`             | ❌ No                     | Check if employee already exists          |
+| `every()`       | Check if all elements match            | `true` / `false`             | ❌ No                     | Validate all employees are active         |
+| `reduce()`      | Convert array into a single value      | Single value                 | ❌ No                     | Total salary, dashboard summary           |
+| `slice()`       | Copy part of an array                  | New array                    | ❌ No                     | Pagination, first 10 records              |
+| `splice()`      | Add, remove, or replace elements       | Removed elements             | ✅ Yes                    | Remove/update temporary records           |
+| `sort()`        | Sort array                             | Sorted array                 | ✅ Yes                    | Sort employees by salary/name             |
+| `reverse()`     | Reverse array order                    | Reversed array               | ✅ Yes                    | Show latest records first                 |
+| `includes()`    | Check if value exists                  | `true` / `false`             | ❌ No                     | Validate role/department                  |
+| `indexOf()`     | Find position of value                 | Index / `-1`                 | ❌ No                     | Find array position                       |
+| `lastIndexOf()` | Find last occurrence                   | Index / `-1`                 | ❌ No                     | Find last duplicate                       |
+
+
+```
+
+```
+
+| Comparison                  | Key Difference                                                              |
+| --------------------------- | --------------------------------------------------------------------------- |
+| `map()` vs `forEach()`      | `map()` returns a new array; `forEach()` returns nothing.                   |
+| `filter()` vs `find()`      | `filter()` returns all matches; `find()` returns the first match.           |
+| `find()` vs `findIndex()`   | `find()` returns the object; `findIndex()` returns its index.               |
+| `some()` vs `every()`       | `some()` checks at least one; `every()` checks all.                         |
+| `slice()` vs `splice()`     | `slice()` copies without modifying; `splice()` modifies the original array. |
+| `includes()` vs `indexOf()` | `includes()` returns a boolean; `indexOf()` returns the position.           |
+
+```
