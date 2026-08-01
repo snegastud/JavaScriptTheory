@@ -1104,4 +1104,39 @@ setTimeout(() => {
 **What is the Spread Operator?**
 >"The spread operator is an ES6 feature that I mainly use to create a copy of an object, merge multiple objects, or update specific properties without modifying the original object. Instead of manually copying each property, I can copy the entire object in a single line, which makes the code cleaner and easier to maintain."
 
+`shallow copy and deep copy`
 
+"In JavaScript, we create a copy of an object mainly in two ways: shallow copy and deep copy. I choose which one to use based on the type of data I'm working with."
+
+**Shallow Copy**
+
+>"I use a shallow copy when my object contains only simple properties or when I need to update only top-level properties. I usually create it using the spread operator (...) or Object.assign(). It's lightweight and performs well."
+
+Real-time example:
+
+>"In my SAP UI5 application, after receiving employee data from the backend, if I only need to update the employee's salary or status before displaying it, I create a shallow copy using the spread operator and update the required property."
+
+```
+const updatedEmployee = {
+    ...employee,
+    salary: 60000
+};
+
+```
+
+**Deep Copy**
+
+>"I use a deep copy when the object contains nested objects and I don't want changes in the copied object to affect the original object. In modern JavaScript, I use structuredClone() to create a completely independent copy."
+
+`Real-time example:`
+
+>"Suppose the employee object contains an address object or project details. Before editing those nested values, I create a deep copy using structuredClone(). This ensures the original data remains unchanged until the user saves the changes."
+
+```
+const copy = structuredClone(employee);
+
+```
+
+**Best Closing Statement**
+
+>"So, in my project, I use shallow copy for simple property updates because it's efficient. Whenever the object contains nested data and I need complete isolation between the original and copied object, I use a deep copy."
