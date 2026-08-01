@@ -1199,7 +1199,7 @@ forEach()
 
 ```
 
-``` ARRAY METHODS ```
+` ARRAY METHODS` 
 
 | Method          | Purpose                                | Returns                      | Modifies Original Array? | CAP Real-Time Use                         |
 | --------------- | -------------------------------------- | ---------------------------- | ------------------------ | ----------------------------------------- |
@@ -1223,10 +1223,7 @@ forEach()
 | `indexOf()`     | Find position of value                 | Index / `-1`                 | ❌ No                     | Find array position                       |
 | `lastIndexOf()` | Find last occurrence                   | Index / `-1`                 | ❌ No                     | Find last duplicate                       |
 
-
-```
-
-```
+`Difference`
 
 | Comparison                  | Key Difference                                                              |
 | --------------------------- | --------------------------------------------------------------------------- |
