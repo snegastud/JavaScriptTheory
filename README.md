@@ -1199,6 +1199,8 @@ forEach()
 
 ```
 
+```
+
 ` ARRAY METHODS` 
 
 | Method          | Purpose                                | Returns                      | Modifies Original Array? | CAP Real-Time Use                         |
@@ -1234,8 +1236,45 @@ forEach()
 | `slice()` vs `splice()`     | `slice()` copies without modifying; `splice()` modifies the original array. |
 | `includes()` vs `indexOf()` | `includes()` returns a boolean; `indexOf()` returns the position.           |
 
+
 ```
 
 **Template Literals**
 
 >"Normally, if I want to combine variables with a string, I have to use + multiple times. Template literals make this much easier because I can directly place variables inside the string using ${}. It makes the code cleaner and easier to read."
+
+`Example:`
+
+>console.log(`Employee ${employee.employeeId} (${employee.employeeName}) logged in.`);
+
+**Default Parameters**
+
+>"Sometimes while calling a function, we may forget to pass some values. Instead of getting undefined, we can provide a default value in the function itself. If the caller doesn't send a value, JavaScript automatically uses the default value."
+
+
+**Optional Chaining (?.)**
+
+>"Sometimes when we access nested object properties, some values may not exist. Normally, JavaScript throws an error. Optional chaining helps us safely access those properties. If a property doesn't exist, it simply returns undefined instead of stopping or  crashing it simple stop  the program without any error its return the undefined.  
+
+  `coding`
+
+  ```
+  const employee = {
+    name: "Sneha"
+};
+
+console.log(employee.address?.city);
+
+```
+
+**Nullish Coalescing (??)**
+
+>"The Nullish Coalescing operator (??) returns the right-side value only when the left-side value is null or undefined. It's useful when we want to provide a default value without treating 0, false, or an empty string as missing values.
+
+```
+
+const city = undefined;
+
+console.log(city ?? "Chennai");
+
+```
