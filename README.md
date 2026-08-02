@@ -1235,3 +1235,7 @@ forEach()
 | `includes()` vs `indexOf()` | `includes()` returns a boolean; `indexOf()` returns the position.           |
 
 ```
+
+**Template Literals**
+
+>"Normally, if I want to combine variables with a string, I have to use + multiple times. Template literals make this much easier because I can directly place variables inside the string using ${}. It makes the code cleaner and easier to read."
